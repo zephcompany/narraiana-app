@@ -1,0 +1,2 @@
+import {owner,db,failure,ApiError} from '@/lib/server';
+export async function GET(_req:Request,context:{params:Promise<{id:string}>}){try{const uid=await owner();const {id}=await context.params;const p=await db().prepare('SELECT payload,updated_at FROM projects WHERE id=? AND owner=?').bind(id,uid).first<{payload:string;updated_at:string}>();if(!p)throw new ApiError('Atendimento não encontrado.',404);return Response.json({project:{...JSON.parse(p.payload),updatedAt:p.updated_at}},{headers:{'Cache-Control':'private, no-store'}})}catch(e){return failure(e)}}
