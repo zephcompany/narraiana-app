@@ -28,3 +28,10 @@ export function resizeLayer(o:{x:number;y:number;width:number;height:number;rota
   const cx=(width-o.width)*sx/2,cy=(height-o.height)*sy/2;
   return {width,height,x:o.x+cx*c-cy*s,y:o.y+cx*s+cy*c};
 }
+
+/** Keep the original image point under the moving midpoint of a two-finger gesture. */
+export function pinchFrame(view:Size,image:Size,startZoom:number,targetZoom:number,scroll:Point,startAnchor:Point,anchor:Point){
+  const zoom=Math.max(50,Math.min(400,targetZoom));
+  const position=anchoredScroll(viewportGeometry(view,image,startZoom),viewportGeometry(view,image,zoom),scroll,startAnchor);
+  return {zoom,scroll:{x:position.x+startAnchor.x-anchor.x,y:position.y+startAnchor.y-anchor.y}};
+}
