@@ -72,3 +72,5 @@ button.brand:active,.photo-scroll button:active{transform:none}
 @media(max-width:960px) and (min-width:761px){.editor-layout{--rail-size:50px;--library-size:200px;--inspector-size:0px}.properties-panel{grid-column:auto;grid-row:auto}.inspector-closed .properties-panel{transform:translateX(18px)}}
 @media(max-width:760px){.library-closed .library-panel,.inspector-closed .properties-panel{max-height:0;padding-block:0;border-block-width:0}.library-panel,.properties-panel{flex-shrink:0}.library-closed .library-panel,.inspector-closed .properties-panel{transform:translateY(8px)}}
 @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important;scroll-behavior:auto!important}button:not(:disabled):active,.tool:not(:disabled):hover,.mapping-card:hover,.primary-btn:not(:disabled):hover{transform:none}}
+
+.local-storage-note{padding:10px 4%;border-block:1px solid #2e2e2e;background:#191919;color:#bcbcbc;font-size:13px;text-align:center;line-height:1.6}
