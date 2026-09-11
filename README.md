@@ -11,6 +11,17 @@ Aplicativo de visagismo e lash mapping em português, com identidade monocromát
 
 As sugestões usam correspondências explícitas com o material fornecido. A foto não é analisada por IA. As numerações são sugestões editáveis. A profundidade inconsistente no exemplo Natural de Elevação não é usada como regra.
 
+## GitHub Pages
+
+Aplicativo: https://zephcompany.github.io/narraiana-app/
+
+A versão do GitHub Pages usa IndexedDB para guardar fotos e atendimentos no navegador. Não requer login nem envia fotos ao GitHub. Os registros não sincronizam entre dispositivos e são removidos se os dados do site forem apagados. O PDF e o JPG podem ser baixados para guardar e compartilhar. A versão hospedada no Sites mantém seu banco e autenticação.
+
+- `npm ci`: instalar as dependências (Node.js 22.13 ou superior).
+- `npm run build:pages`: gerar o app estático em `docs/`.
+- `npm run preview:pages`: abrir uma prévia da versão estática.
+- O workflow do GitHub Actions publica as alterações da branch `main` no GitHub Pages.
+
 ## Dados
 
 O acesso usa a autenticação da plataforma Sites. Cada foto e atendimento pertence ao usuário autenticado. Os endpoints verificam a propriedade no servidor. Fotos ficam em R2 e registros em D1. A ficha salva automaticamente após incluir foto e nome; erros mantêm o trabalho na tela e oferecem nova tentativa.
