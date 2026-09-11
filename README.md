@@ -38,3 +38,11 @@ As migrações ficam em `drizzle/`. O manifesto `.openai/hosting.json` contém a
 ## Conteúdo
 
 As referências de olhos, identidade e os cílios originais foram fornecidos pelo usuário, incluindo os dois documentos do Canva. A interface de compartilhamento abre o seletor do dispositivo quando disponível; nos demais navegadores baixa o PDF para anexar à conversa.
+
+## Uso no celular
+
+- A foto permanece visível durante a análise e o uso dos painéis do editor.
+- No editor, use **Cílios**, **Ajustes** e **Só foto**; o botão de foco abre a edição em tela cheia.
+- Aplique um olho ou o par, toque para selecionar, arraste as marcações e use as alças ou os controles de tamanho, rotação e posição. Dois dedos ampliam a foto; a ferramenta de mão move o enquadramento.
+- Os campos e botões foram ajustados para toque, teclado mobile e áreas seguras da tela. As transições respeitam a preferência de movimento reduzido.
+- O PDF é preparado antes de abrir o compartilhamento do dispositivo. O app tenta salvar também ao ser colocado em segundo plano; use **Salvar** e exporte o PDF antes de fechar o navegador.
